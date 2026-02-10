@@ -174,22 +174,24 @@ Generates 6 publication-ready PNG figures. Requires:
 
 ### Arrival Model
 
-Arrivals at time $(h, d, m, s)$ (hour, day-of-week, month, skill decile) follow a non-homogeneous Poisson process:
+Arrivals at time (hour h, day-of-week d, month m, skill decile s) follow a non-homogeneous Poisson process:
 
-$$\lambda(h, d, m, s) = \lambda_0(h, s) \times \text{dow\_fraction}(d, \text{mode}) \times \text{seasonal}(m)$$
+```
+λ(h, d, m, s) = λ₀(h, s) × dow_fraction(d, mode) × seasonal(m)
+```
 
 Where:
-- $\lambda_0(h, s)$ = base hourly rate for hour $h$ and skill decile $s$
-- $\text{dow\_fraction}(d, \text{mode})$ = day-of-week weight
-- $\text{seasonal}(m)$ = monthly multiplier (relative to yearly average)
+- **λ₀(h, s)** = base hourly rate for hour h and skill decile s
+- **dow_fraction(d, mode)** = day-of-week weight (from `dow_distribution.csv`)
+- **seasonal(m)** = monthly multiplier relative to yearly average (from `monthly_seasonality.csv`)
 
 ### Skill Discretization
 
-Elo is mapped to deciles 1-10 based on distribution quantiles:
-- Decile 1: 0-10th percentile (lowest skill)
-- Decile 10: 90-100th percentile (highest skill)
+Elo is mapped to deciles 1–10 based on distribution quantiles:
+- Decile 1: 0–10th percentile (lowest skill)
+- Decile 10: 90–100th percentile (highest skill)
 
-Within a decile, Elo follows $\mathcal{N}(\mu, \sigma)$ truncated to decile bounds.
+Within a decile, Elo follows a normal distribution N(μ, σ) truncated to decile bounds.
 
 ### Temporal Granularity
 
