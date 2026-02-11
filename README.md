@@ -1,6 +1,9 @@
 # Anonymized AoE2 Matchmaking Arrival Dataset
 
-A publication-ready dataset of anonymized matchmaking arrivals extracted from AoE2 competitive play, with fitted parameters for synthetic generation.
+> **⚠️ Anonymous Repository for Peer Review**
+> This repository accompanies a manuscript currently under review at *IEEE Transactions on Games*. Author information and full citation will be added upon publication.
+
+A publication-ready dataset of anonymized player arrival parameters extracted from competitive Age of Empires II matchmaking data, with fitted models for synthetic queue generation.
 
 ## Overview
 
@@ -225,15 +228,19 @@ Run `validate_distributions.py` to check:
 
 ## Citation
 
-If using this dataset, cite:
+**Note:** This repository is anonymized for peer review. Upon publication, a full citation will be provided here.
 
-> AoE2 Anonymized Matchmaking Arrival Dataset. Extracted from The Oceanic Guild (TOG) competitive matchmaking logs. Parameters fitted to 10+ million arrival records across 2v2, 3v3, 4v4 modes and 10 skill deciles.
+If using this dataset, please cite the accompanying paper:
 
-## Contact & Reproducibility
+> [Authors anonymized for review]. "Beyond Elo: Improving Matchmaking Using the Team Player Effect." *IEEE Transactions on Games* (under review), 2026.
 
-To regenerate parameters:
+The dataset will be archived with a DOI upon acceptance.
 
-1. Start with raw `long_matches.csv` containing columns: `datetime`, `mode`, `p_elo`
+## Reproducibility
+
+To regenerate parameters from raw data:
+
+1. Start with raw match data containing columns: `datetime`, `mode`, `p_elo`
 2. Run `python extract_arrival_parameters.py`
 3. Validate with `python validate_distributions.py`
 4. Generate figures with `python generate_visualizations.py`
@@ -242,7 +249,7 @@ For reproducible synthetic data, use the same random seed.
 
 ## License
 
-This dataset is provided for research purposes. No personal information is included.
+This dataset is provided for research purposes. No personally identifiable information is included. All data has been aggregated and anonymized.
 
 ---
 
