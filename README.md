@@ -1,9 +1,6 @@
-# Anonymized AoE2 Matchmaking Arrival Dataset
+# AoE2 Matchmaking Arrival Dataset
 
-> **⚠️ Anonymous Repository for Peer Review**
-> This repository accompanies a manuscript currently under review at *IEEE Transactions on Games*. Author information and full citation will be added upon publication.
-
-A publication-ready dataset of anonymized player arrival parameters extracted from competitive Age of Empires II matchmaking data, with fitted models for synthetic queue generation.
+A publication-ready dataset of anonymized player arrival parameters extracted from competitive Age of Empires II matchmaking data, with fitted models for synthetic queue generation. This repository accompanies the paper by Elbert et al. (2026) published in *IEEE Transactions on Games*.
 
 ## Overview
 
@@ -228,13 +225,19 @@ Run `validate_distributions.py` to check:
 
 ## Citation
 
-**Note:** This repository is anonymized for peer review. Upon publication, a full citation will be provided here.
-
 If using this dataset, please cite the accompanying paper:
 
-> [Authors anonymized for review]. "Beyond Elo: Improving Matchmaking Using the Team Player Effect." *IEEE Transactions on Games* (under review), 2026.
-
-The dataset will be archived with a DOI upon acceptance.
+```bibtex
+@article{elbert2026beyondelo,
+  title={Beyond Elo: Improving Matchmaking Using the Team Player Effect},
+  author={Elbert, Nico and Klockmann, Victor and Kosse, Fabian and
+          von Schenk, Alicia and Stein, Nikolai and Flath, Christoph M.},
+  journal={IEEE Transactions on Games},
+  year={2026},
+  publisher={IEEE},
+  doi={TBD}
+}
+```
 
 ## Reproducibility
 
@@ -249,10 +252,10 @@ For reproducible synthetic data, use the same random seed.
 
 ## License
 
-This dataset is provided for research purposes. No personally identifiable information is included. All data has been aggregated and anonymized.
+This work is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). You are free to share and adapt this dataset for any purpose, provided you give appropriate credit.
 
 ---
 
-**Last Updated:** 2026-02-10
+**Last Updated:** 2026-04-25
 **Python Version:** 3.8+
 **Dependencies:** pandas, numpy, scipy, matplotlib, seaborn

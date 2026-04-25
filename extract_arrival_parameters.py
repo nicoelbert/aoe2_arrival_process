@@ -1,5 +1,5 @@
 """
-Anonymized Arrival Dataset Extraction for AoE2 Matchmaking
+Arrival Dataset Extraction for AoE2 Matchmaking
 
 This script extracts arrival parameters from raw matchmaking data, computing:
 - Hourly Poisson arrival rates (λ) stratified by mode and skill decile
@@ -253,7 +253,7 @@ def generate_summary_stats(df, output_path):
         'value': [
             f"{len(df):,}",
             f"{df['match_id'].nunique():,}",
-            '(anonymized)',
+            f"{df['player_id'].nunique():,}" if 'player_id' in df.columns else 'N/A',
             f"{(df['date'].max() - df['date'].min()).days}",
             ', '.join(sorted(df['mode'].unique())),
             f"{df['player_elo'].min():.0f} - {df['player_elo'].max():.0f}",

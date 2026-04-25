@@ -8,7 +8,7 @@ Generates synthetic arrival events from fitted parameters:
 - Samples arrival count from Poisson distribution with rate λ
 - Applies monthly seasonality multiplier
 
-Output: synthetic arrival times with mode and skill level (anonymized)
+Output: synthetic arrival times with mode and skill level
 """
 
 import pandas as pd
